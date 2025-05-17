@@ -55,7 +55,7 @@ const History = () => {
             </TabsContent>
           </CardContent>
         </Tabs>
-        <ScrollBar className="bg-primary  " orientation="horizontal" />
+        <ScrollBar className="bg-transparent  " orientation="horizontal" />
       </ScrollArea>
     </Card>
   );
