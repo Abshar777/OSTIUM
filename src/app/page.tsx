@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <>
       <div className="w-full     rounded-md  flex flex-col  ">
-        <div className="border-b md:px-40 border-dashed ">
+        <div className="border-b md:px-40 px-5 border-dashed ">
           <Valut />
         </div>
         <div className="border-b md:px-40  px-5 border-dashed ">

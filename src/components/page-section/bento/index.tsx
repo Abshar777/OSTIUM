@@ -6,7 +6,7 @@ import OldPrice from "./oldPrice";
 const Bento = () => {
   return (
     <>
-      <div className="grid border-dashed md:border-x md:px-5 py-4 grid-cols-1 md:grid-cols-3 gap-4 pb-2">
+      <div className="grid border-dashed border-x md:px-5 px-1 py-4 grid-cols-1 md:grid-cols-3 gap-4 pb-2">
         <div className="col-span-1 overflow-hidden w-full">
           <DepositAndWithdraw />
         </div>
@@ -14,11 +14,11 @@ const Bento = () => {
           <History />
         </div>
       </div>
-      <div className="grid grid-cols-1 md:border-x border-dashed md:px-5 py-4 w-full  md:grid-cols-7 gap-4">
-        <div className="col-span-3 overflow-hidden w-full">
+      <div className="grid grid-cols-1 border-x px-1 border-dashed md:px-5 py-4 w-full  md:grid-cols-7 gap-4">
+        <div className="md:col-span-3 overflow-hidden w-full">
           <Epoch />
         </div>
-        <div className="col-span-4 overflow-hidden w-full">
+        <div className="md:col-span-4 overflow-hidden w-full">
           <OldPrice />
         </div>
       </div>
