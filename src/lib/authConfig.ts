@@ -14,7 +14,7 @@ export const authConfig: AuthOptions = {
       },
       async authorize(credentials) {
         console.log("authorize", credentials)
-        if (!credentials?.email || !credentials?.name || !credentials.id || !credentials.role) {
+        if (!credentials?.email || !credentials?.name || !credentials.id ) {
           console.log("Email and name and id are required.");
           // throw new Error("Email and password are required.");
           return null;

@@ -33,22 +33,25 @@ export const useAuth = (type: "login" | "signup" = "login") => {
   useEffect(() => {
     if (isPending) setIsLoading(true);
     if (mutationError) setIsLoading(false);
-  }, [isPending, mutationError]);
+
+  }, [isPending, mutationError, isSuccess]);
 
   const { form, control, errors, onFormSubmit, reset } = useZodFormV2(schema, (data: any) => mutate(data), defaultValues as any, { mode: "onSubmit", showToastOnError: true });
 
   async function onSubmit(data: IApiResponse) {
     try {
+      toast.success("Logging in...");
+      console.log(data)
       await signIn("credentials", {
         email: data.user.email,
-        token: data.accessToken,
+        token: data.token,
         id: data.user._id,
         name: data.user.name,
         redirect: false
       })
       const message = type === "login" ? "Login successful" : "Signup successful";
       toast.success(message);
-      router.push("/home/profile");
+      router.push("/root");
       reset();
       setIsLoading(false);
     } catch (error) {
@@ -56,7 +59,7 @@ export const useAuth = (type: "login" | "signup" = "login") => {
       setIsLoading(false);
     }
   }
-  
+
   return { register: form.register, control, errors, onFormSubmit, mutate, isPending: isLoading, error: mutationError, isSuccess }
 
 }
