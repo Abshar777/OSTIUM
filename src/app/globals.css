@@ -155,3 +155,42 @@ input[type="number"]::-webkit-outer-spin-button {
   margin: 0;
 }
 
+.typewriter-cursor {
+  animation: blink .5s step-start infinite;
+}
+
+@keyframes blink {
+  from, to { color: transparent }
+  50% { color: var(--primary) }
+}
+
+
+.errInput {
+  border: 1px solid red !important;
+  outline: 0px transparent;
+}
+
+
+::selection {
+  background-color: #e65c009f;
+  color: #fff;
+}
+
+
+.gridAnim {
+  transition: all linear 0.3s;
+  background-size: 35px 35px;
+  background-position-x: 10rem;
+  animation: backgroundP 600s infinite;
+  background-image: linear-gradient(to right, #4b4a4a1f, #0000 1px),
+    linear-gradient(#4b4a4a1f, #0000 1px);
+}
+
+@keyframes backgroundP {
+  0% {
+    background-position: 0rem;
+  }
+  100% {
+    background-position: 1000rem;
+  }
+}
