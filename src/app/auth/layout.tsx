@@ -18,7 +18,7 @@ const AuthLayout = ({ children }: { children: React.ReactNode }) => {
   const images = ["/bg-2.png", "/bg-2.png", "/bg-2.png", "/bg-2.png"];
 
   return (
-    <div className="grid gridAnim min-h-[98vh] overflow-hidden md:grid-cols-2 h-full">
+    <div className="grid gridAnim min-h-svh overflow-hidden md:grid-cols-2 h-full">
       <div className="flex  justify-center items-center w-full h-full  gap-4 px-6 py-4 md:px-10">
         <div className="flex justify-center absolute top-5 left-10 gap-2 md:justify-start">
           <a href="#" className="flex items-center gap-2 font-medium">
@@ -29,7 +29,7 @@ const AuthLayout = ({ children }: { children: React.ReactNode }) => {
         {children}
       </div>
       <div className="relative w-full h-full overflow-hidden md:flex items-start justify-center hidden p-2">
-        <div className="w-full h-[97%] relative overflow-hidden bg-black rounded-md">
+        <div className="w-full h-full relative overflow-hidden bg-black rounded-md">
           <img
             src={images[0]}
             alt={`carousel-image-${0}`}
