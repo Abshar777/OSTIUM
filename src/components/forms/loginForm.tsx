@@ -24,7 +24,7 @@ export function LoginForm() {
       onSubmit={onFormSubmit}
       className="flex justify-center items-center w-full flex-col gap-6"
     >
-      <div className="md:w-[55%] w-full  flex flex-col gap-6">
+      <div className="md:w-[65%] w-full  flex flex-col gap-6">
         {err && <Alert cont={err} />}
         <motion.div
           variants={item_variants}

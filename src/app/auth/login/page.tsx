@@ -36,7 +36,7 @@ const page = () => {
         <div className="w-full items-center flex flex-col gap-6">
           <motion.div
             variants={item_variants}
-            className="relative md:w-[55%] w-full text-center text-sm after:absolute after:inset-0 after:top-1/2 after:z-0 after:flex after:items-center after:border-t after:border-border"
+            className="relative md:w-[65%] w-full text-center text-sm after:absolute after:inset-0 after:top-1/2 after:z-0 after:flex after:items-center after:border-t after:border-border"
           >
             <span className="relative z-10 bg-background px-2 text-muted-foreground">
               Or
@@ -44,7 +44,7 @@ const page = () => {
           </motion.div>
           <motion.div
             variants={item_variants}
-            className="grid gap-4 md:w-[55%] w-full sm:grid-cols-2"
+            className="grid gap-4 md:w-[65%] w-full sm:grid-cols-2"
           >
             <Button variant="outline" className="w-full">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
